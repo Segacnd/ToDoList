@@ -1,15 +1,15 @@
-$('#rangestart').calendar({
+jQuery('#rangestart').calendar({
     type: 'date',
-    endCalendar: $('#rangeend')
+    endCalendar:jQuery('#rangeend')
   });
-  $('#rangeend').calendar({
+  jQuery('#rangeend').calendar({
     type: 'date',
-    startCalendar: $('#rangestart')
+    startCalendar:jQuery('#rangestart')
   });
 
 
   
-//     $('.ui.progress')
+//    jQuery('.ui.progress')
 //     .progress({
 //       duration : 200,
 //       total    : 2,
@@ -112,7 +112,7 @@ const toDo = {
     createProgressBar: function (value, total, taskId) {
       const taskIdName = '#' + taskId;
 
-      $(taskIdName)
+     jQuery(taskIdName)
       .progress({
         duration : 200,
         total,
