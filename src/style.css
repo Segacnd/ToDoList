@@ -1,0 +1,229 @@
+body
+{
+    background: url(../../TODO/img/background2.jpg) no-repeat fixed !important;
+    background-size: cover !important;
+    box-sizing: border-box;
+}
+
+header
+{   
+    padding-top: 1.8vmax;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    min-height: 5vmax;
+    margin-bottom: 1em;
+    
+}
+.logIn
+{
+    margin: 10px;
+    border-radius: 50%;
+    border: none;
+    height: 55px;
+    width: 55px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.logIn:hover 
+{
+    background: #7c7c7c6b;
+}
+
+.achivement
+{
+    margin: 10px;
+    border-radius: 50%;
+    border: none;
+    height: 55px;
+    width: 55px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.achivement:hover 
+{
+    background: #7c7c7c6b;
+}
+
+.mainCont
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.counteiner
+{
+    width: 60vmax;
+    height: 39vmax;
+    background: rgba(85, 122, 138, 0.577);
+    /* background: linear-gradient(186deg, rgba(14,120,166,0.692612079011292) 27%, rgba(233,161,164,0.6589986336331408) 79%); */
+
+    border-radius: 2vmax;
+    padding: 1vmax;
+
+    
+}
+
+.ui.form .two.fields>.field
+{
+    width: fit-content !important;
+    margin: 1em;
+}
+
+.ui .calendar
+{
+    width: 160px;
+    background: rgb(14,120,166);
+    background: linear-gradient(186deg, rgba(14,120,166,0.692612079011292) 27%, rgba(233,161,164,0.6589986336331408) 79%);   
+}
+
+.avatar
+{
+
+    /* transform: translate(-50%); */
+    width: 7vmax;
+    height: 7vmax;
+    overflow: hidden;
+    background: rgb(162, 153, 153);
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+    margin: 1em;
+}
+
+.ava
+{
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.urName
+{
+    margin: 1em;
+}
+
+.subTask input
+{
+    border: none;
+    outline: none;
+
+    padding: 10px 15px;
+    border-radius: 1em;
+
+    background: #fffefe9e;
+    color: rgb(74, 68, 68);
+
+    width: 24vmax;
+
+    font-family: inherit;
+    font-size: 120%;
+
+	margin: 10px;
+    
+    
+}
+.subTask
+{
+    position: relative;
+}
+
+
+.headerContent
+{
+    display: flex;
+    width: 100%;
+    padding-left: 2vmax;
+    padding-right: 2vmax;
+}
+.subCounteiner
+{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.userTask
+{
+    width: 100%;
+    height: 28.5vmax;
+   
+    border-radius: 1.5vmax;
+    padding: 1vmax;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: 0.5s;
+    overflow-y: auto;
+
+    
+}
+
+.taskTest
+{
+    display: flex;
+    align-items: center;
+    background-color: #fffefe43;
+    width: fit-content;
+    padding: 0.5em;
+    margin: 0.25em;
+    
+
+}
+
+.taskTexst
+{
+    color: rgb(74, 68, 68);
+    margin: 0 0.8em 0 ;
+    max-width: 200px;
+    overflow-y: auto;
+
+}
+
+.style
+{
+    width: 120px !important;
+    margin-left: 10px !important;
+}
+
+.label
+{
+    color: rgb(74, 68, 68) !important;
+}
+
+
+.subButton
+{
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    margin: 8px;
+    border-radius: 50%;
+    border: none;
+    height: 34px;
+    width: 34px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.subButton:hover 
+{
+    background: #7c7c7c6b;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="../../test/nullStyle.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <button class="logIn">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="3em" width="3em" 
+            xmlns="http://www.w3.org/2000/svg"><path d="M13 16L18 12 13 8 13 11 4 11 4 13 13 13z"></path>
+            <path d="M20,3h-9C9.897,3,9,3.897,9,5v4h2V5h9v14h-9v-4H9v4c0,1.103,0.897,2,2,2h9c1.103,0,2-0.897,2-2V5C22,3.897,21.103,3,20,3z">
+            </path></svg>
+        </button>
+        <button class="achivement">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="3em" width="3em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M560 224h-29.5c-8.8-20-21.6-37.7-37.4-52.5L512 96h-32c-29.4 0-55.4 13.5-73 34.3-7.6-1.1-15.1-2.3-23-2.3H256c-77.4 0-141.9 55-156.8 128H56c-14.8 0-26.5-13.5-23.5-28.8C34.7 215.8 45.4 208 57 208h1c3.3 0 6-2.7 6-6v-20c0-3.3-2.7-6-6-6-28.5 0-53.9 20.4-57.5 48.6C-3.9 258.8 22.7 288 56 288h40c0 52.2 25.4 98.1 64 127.3V496c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-48h128v48c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-80.7c11.8-8.9 22.3-19.4 31.3-31.3H560c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16zm-128 64c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zM256 96h128c5.4 0 10.7.4 15.9.8 0-.3.1-.5.1-.8 0-53-43-96-96-96s-96 43-96 96c0 2.1.5 4.1.6 6.2 15.2-3.9 31-6.2 47.4-6.2z">
+            </path></svg>
+        </button>
+    </header>
+    <main>
+        <div class="mainCont">
+            <div class="counteiner">
+                <div class="headerContent">
+                    <div class="avatar">
+                        <img src="../../TODO/img/background.jpg" alt="" class="ava">
+                    </div>
+                    <div class="urName">
+                        <h3>
+                            Your Name
+                        </h3>
+                    </div>
+                    <div class="subCounteiner">
+                        <form action="#" class="subForm">
+                            <div class="subTask">
+                                <input type="text" name="task" class="userTaskTexst">
+                                <button type="submit" class="subButton">
+                                    <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4H18V6H20V8H18V10H16V8H14V6H16V4Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 12V6H4V20H18V12H12ZM6 8H10V12H6V8ZM10 14V18H6V14H10ZM16 14V18H12V14H16Z" fill="currentColor"></path></svg>
+                                </button>
+                            </div>
+                            <div class="ui form">
+                                <div class="two fields">
+                                <div class="field">
+                                    
+                                    <div class="ui calendar" id="rangestart">
+                                    <div class="ui input left icon">
+                                        <i class="calendar icon"></i>
+                                        <input type="text" name="start" placeholder="Start" class="calendarDateInput">
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    
+                                    <div class="ui calendar" id="rangeend">
+                                    <div class="ui input left icon">
+                                        <i class="calendar icon"></i>
+                                        <input type="text" name="end" placeholder="End" class="calendarDateInput">
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="userTask">
+                    <!-- <div class="taskTest">
+                        <div class="ui toggle checkbox">
+                            <input type="checkbox" name="public">
+                            <label class=""></label>
+                        </div>
+                        <div class="taskTexst">Prigotovit' svin'u s makaronami we</div>
+                        <div class="ui indicating progress style" data-value="1" data-total="200" id="example5">
+                            <div class="bar">
+                              <div class="progress"></div>
+                            </div>
+                            <div class="label">Waiting for</div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
