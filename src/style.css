@@ -1,6 +1,6 @@
 body
 {
-    background: url(../../TODO/img/background2.jpg) no-repeat fixed !important;
+    background: url(../TODO/img/background2.jpg) no-repeat fixed !important;
     background-size: cover !important;
     box-sizing: border-box;
 }
