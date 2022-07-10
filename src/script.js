@@ -216,10 +216,10 @@ function createPopupModal() {
 
 
 function popupOpen() {
-  const currentPopup = document.querySelector('#popup');
+  const currentPopup = document.querySelector('#popupAchive');
 
   if (currentPopup) {
-      const popupActive = document.querySelector('#popup.open');
+      const popupActive = document.querySelector('#popupAchive.open');
 
       if (popupActive) {
           popupClose();
@@ -233,7 +233,7 @@ function popupOpen() {
 
 
 function popupClose() {
-  const popupActive = document.querySelector('#popup.open');
+  const popupActive = document.querySelector('#popupAchive.open');
   bodyUnLock()
 
 

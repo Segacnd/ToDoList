@@ -228,7 +228,7 @@ header
     background: #7c7c7c6b;
 }
 
-.popup {
+.popupAchive {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -256,12 +256,12 @@ header
     color: #fffefe9e;
 }
 
-.popup.open {
+.popupAchive.open {
     opacity: 1;
     visibility: visible;
 }
 
-.popup.open .popup__content {
+.popupAchive.open .popup__content {
     transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
     opacity: 1;
 }
@@ -318,4 +318,5 @@ h2
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0.7;
 }
