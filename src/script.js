@@ -21,7 +21,8 @@ jQuery('#rangestart').calendar({
 // ;
 
 
-
+const ACTIVE_STATUS = 'active';
+const COMPLETED_STATUS = 'complete';
 
 
 const toDo = {
@@ -40,7 +41,7 @@ const toDo = {
     const label = document.createElement('div')
 
     taskTexst.innerText = userTexst;
-    label.innerText = 'Waiting for';
+    label.innerText = 'Comleted';
 
     taskTest.className = 'taskTest';
     uiToggleCheckbox.className = 'ui toggle checkbox';
@@ -73,9 +74,11 @@ const toDo = {
     userTask.appendChild(taskTest)
 
 
+    if (this.currentStatus == ACTIVE_STATUS) {
+      this.createProgressBar(value, total, taskId)
+    }
+  
     checkbox.addEventListener('change', this.deleteTask.bind(this));
-    this.createProgressBar(value, total, taskId)
-
   },
 
   handleFormSubmit: function (event) {
@@ -141,7 +144,7 @@ const toDo = {
 
     saveToLocStor: function (taskName, taskId, rezult, rest) {
       const userData = localStorage.getItem('userData');
-      const newTask = {taskName, taskId, total: rezult, value: rest};
+      const newTask = {taskName, taskId, total: rezult, value: rest, status: ACTIVE_STATUS};
 
       if (!userData) {
           localStorage.setItem('userData', JSON.stringify([newTask])) //SAVE TO LOCALsTORAGE
@@ -155,6 +158,17 @@ const toDo = {
       }
     },
 
+    currentStatus: 'active',
+
+    changeStatusActive: function() {
+      this.currentStatus =  'active';
+      this.renderTaskList()
+    },
+
+    changeStatusComplete: function() {
+      this.currentStatus =  'complete';
+      this.renderTaskList()
+    },
 
     renderTaskList: function () {
       const userData = localStorage.getItem('userData');
@@ -165,8 +179,10 @@ const toDo = {
 
         const parsedUserData = JSON.parse(userData);
         parsedUserData.forEach(element => {
-            const { taskName, taskId, total, value } = element;
-            this.createNewTask(taskName, taskId, total, value);
+            if (element.status === this.currentStatus) {
+              const { taskName, taskId, total, value, status } = element;
+              this.createNewTask(taskName, taskId, total, value, status);
+          }
         });
       }
     
@@ -182,7 +198,13 @@ const toDo = {
             const userData = localStorage.getItem('userData');
             const parsedUserData = JSON.parse(userData);
       
-            const res = parsedUserData.filter((item) => item.taskId !== deleteTaskId);
+            const res = parsedUserData.map((item) => {
+              if(item.taskId === deleteTaskId){
+                item.status = COMPLETED_STATUS;
+              } 
+              
+              return item;
+            });
       
             localStorage.setItem('userData', JSON.stringify(res));
             this.renderTaskList();
@@ -197,6 +219,12 @@ const toDo = {
 const form = document.querySelector(".subForm");
 form.addEventListener('submit', toDo.handleFormSubmit.bind(toDo));
 
+
+const buttonComplete = document.querySelector(".completed");
+buttonComplete.addEventListener('click', toDo.changeStatusComplete.bind(toDo));
+
+const buttonActive = document.querySelector(".active");
+buttonActive.addEventListener('click', toDo.changeStatusActive.bind(toDo));
 
 document.addEventListener('DOMContentLoaded', toDo.renderTaskList.bind(toDo));
 
