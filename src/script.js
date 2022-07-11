@@ -172,15 +172,22 @@ const toDo = {
     
     },
 
+    timerId: 0,
+
     deleteTask: function (e) {
-      const deleteTaskId = e.target.dataset.taskId;
-      const userData = localStorage.getItem('userData');
-      const parsedUserData = JSON.parse(userData);
-
-      const res = parsedUserData.filter((item) => item.taskId !== deleteTaskId);
-
-      localStorage.setItem('userData', JSON.stringify(res));
-      this.renderTaskList();
+      clearTimeout(this.timerId);
+      this.timerId = setTimeout(() => {
+          if (e.target.checked){
+            const deleteTaskId = e.target.dataset.taskId;
+            const userData = localStorage.getItem('userData');
+            const parsedUserData = JSON.parse(userData);
+      
+            const res = parsedUserData.filter((item) => item.taskId !== deleteTaskId);
+      
+            localStorage.setItem('userData', JSON.stringify(res));
+            this.renderTaskList();
+          }  
+      }, 2000)
     }
 };
 

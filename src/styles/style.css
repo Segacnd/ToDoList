@@ -287,7 +287,7 @@ header
     position: relative;
     transition: all 0.8s ease 0s;
     opacity: 0;
-    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+    transform: perspective(600px) translate(0, -100%) rotateX(50deg) ;
 }
 
 .popup__title {
