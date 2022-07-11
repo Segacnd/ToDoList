@@ -400,7 +400,7 @@ h2
 
 .noContent
 {
-    visibility: hidden;
+    display: none;
     text-align: center;
     margin-top: 30px;
     text-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
