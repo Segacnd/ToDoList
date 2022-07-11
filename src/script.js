@@ -81,8 +81,24 @@ const toDo = {
     checkbox.addEventListener('change', this.deleteTask.bind(this));
   },
 
+  createNewTaskDeleted: function (userTexst) {
+    const taskTest = document.createElement('div')
+    const taskTexst = document.createElement('div')
+
+    taskTexst.innerText = userTexst;
+
+    taskTest.className = 'taskTest gotovo';
+    taskTexst.className = 'taskTexst';
+
+    taskTest.appendChild(taskTexst);
+
+    const userTask = document.querySelector('.userTask');
+    userTask.appendChild(taskTest)
+  },
+
   handleFormSubmit: function (event) {
     event.preventDefault();
+    // location.reload();
 
     const formData = new FormData(event.target);
 
@@ -167,10 +183,29 @@ const toDo = {
 
     changeStatusComplete: function() {
       this.currentStatus =  'complete';
-      this.renderTaskList()
+      this.renderTaskList1()
     },
 
     renderTaskList: function () {
+      const userData = localStorage.getItem('userData');
+      
+      if (!userData) {
+        
+      } else {
+        document.querySelector(".userTask").innerHTML = "";
+        
+        const parsedUserData = JSON.parse(userData);
+        parsedUserData.forEach(element => {
+            if (element.status === this.currentStatus) {
+              const { taskName, taskId, total, value, status } = element;
+              this.createNewTask(taskName, taskId, total, value, status);
+          } 
+        });
+      }
+    
+    },
+
+    renderTaskList1: function () {
       const userData = localStorage.getItem('userData');
       
       if (!userData) {
@@ -179,10 +214,10 @@ const toDo = {
 
         const parsedUserData = JSON.parse(userData);
         parsedUserData.forEach(element => {
-            if (element.status === this.currentStatus) {
-              const { taskName, taskId, total, value, status } = element;
-              this.createNewTask(taskName, taskId, total, value, status);
-          }
+            if (element.status === 'complete') {
+              const { taskName } = element;
+              this.createNewTaskDeleted(taskName);
+          } 
         });
       }
     
@@ -288,3 +323,13 @@ function bodyUnLock() {
 }
 
 createPopupModal()
+
+// function emae () {
+//   const userData = localStorage.getItem('userData');
+//   if (!userData) {
+//     document.querySelector('.noContent').style.visibility = 'visible'
+//   } else {
+//     document.querySelector('.noContent').style.visibility = 'hidden'
+//   }
+// }
+// emae()
