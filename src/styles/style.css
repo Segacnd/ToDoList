@@ -350,3 +350,42 @@ h2
         top: 1px;
     }
 }
+
+
+.middleCont
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.urTask
+{
+    padding: 0 0 10px 10px;
+}
+.urTask button 
+{
+    margin-left: 10px;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background: rgba(24, 152, 207, 0.407);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-in-out 0.25s;
+
+}
+
+.urTask button:hover
+{
+    background: rgba(14, 120, 166, 0.595);
+}
+.active:active
+{
+    transform: translate(0, -10%);
+}
+.completed:active
+{
+    transform: translate(0, -10%);
+}
