@@ -1,0 +1,29 @@
+@media screen and (min-width: 330px)  and (max-width: 500px){
+    .counteiner {
+         height: 500px;
+        width: 300px;        
+    }
+    .headerContent{
+        flex-wrap: wrap;
+    }
+    .subTask {
+        margin: 0;
+        width: 270px;
+    }
+
+    .subTask input{
+        margin-right: 0;
+        width: 248px;
+        margin: 3px;
+    }
+    .subButton{
+        height: 30px;
+        width: 30px;
+    }
+    .ui .calendar {
+        width: 123px;
+    }
+    .subButton{
+        top: 1px;
+    }
+}
