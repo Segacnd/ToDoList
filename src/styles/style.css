@@ -186,6 +186,7 @@ header
 {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #fffefe43;
     width: fit-content;
     padding: 0.5em;
@@ -199,6 +200,7 @@ header
 {
     color: rgb(74, 68, 68);
     margin: 0 0.8em 0 ;
+    
     max-width: 200px;
     overflow-y: auto;
 
@@ -206,7 +208,7 @@ header
 
 .gotovo
 {   
-    background-color: #fffefe43;
+    background-color: #72d313a1;
     color: black;
     padding: 5px;
     margin: 10px;
@@ -408,10 +410,6 @@ h2
     transition: all ease-in-out 0.25s;
 }
 
-.ui.checkbox
-{
-    
-}
 
 .ui.checkbox::before
 {
