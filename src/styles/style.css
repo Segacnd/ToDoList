@@ -182,6 +182,11 @@ header
     
 }
 
+.userTask::-webkit-scrollbar-track {
+    background: #8b8a9133;        /* цвет зоны отслеживания */
+  }
+
+
 .taskTest
 {
     display: flex;
@@ -249,7 +254,7 @@ header
 {
     position: absolute;
     top: 6px;
-    right: 20px;
+    right: 26px;
     margin: 8px;
     border-radius: 50%;
     border: none;
@@ -432,3 +437,4 @@ h2
 {
     display: block;
 }
+
