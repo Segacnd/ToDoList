@@ -110,14 +110,14 @@ const toDo = {
     const { total, value } = this.transformDate(dateStart, dateEnd);
 
     if(userTexst.length && dateStart && dateEnd) {
+      
     this.createNewTask(userTexst, generatedId, total, value);
     this.clearValue();
     this.saveToLocStor(userTexst, generatedId, total, value);
     } else {
-      alert('You need enter texst and Date')
-    }
 
-    
+      alert('Sorry, but You need to enter texst and Date')
+    }
     },
 
   transformDate: function (dateStart, dateEnd) {
