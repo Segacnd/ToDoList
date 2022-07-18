@@ -97,9 +97,8 @@ const toDo = {
   },
 
   handleFormSubmit: function (event) {
-    event.preventDefault();
+    event.preventDefault();   
     // location.reload();
-
     const formData = new FormData(event.target);
 
     const userTexst = formData.get("task");
@@ -110,9 +109,15 @@ const toDo = {
     const generatedId = this.generateId();
     const { total, value } = this.transformDate(dateStart, dateEnd);
 
+    if(userTexst.length && dateStart && dateEnd) {
     this.createNewTask(userTexst, generatedId, total, value);
     this.clearValue();
     this.saveToLocStor(userTexst, generatedId, total, value);
+    } else {
+      alert('You need enter texst and Date')
+    }
+
+    
     },
 
   transformDate: function (dateStart, dateEnd) {

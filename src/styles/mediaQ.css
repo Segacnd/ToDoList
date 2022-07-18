@@ -1,4 +1,4 @@
-@media screen and (min-width: 330px)  and (max-width: 500px){
+@media screen and  (max-width: 500px){
     .counteiner {
          height: 500px;
         width: 300px;        
@@ -26,4 +26,13 @@
     .subButton{
         top: 1px;
     }
+}
+
+@media (max-width: 1200px){
+    .counteiner {
+        width: 70vmax;
+        height: 50vmax;       
+    }
+
+ 
 }
